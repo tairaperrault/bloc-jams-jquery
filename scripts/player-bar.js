@@ -1,6 +1,6 @@
 {
   $('button#play-pause').click( function () {
-    player.playPause();
+helper.playPauseAndUpdate();
     $(this).attr('playState', player.playState);
     $('#time-control .total-time').text( player.prettyTime(player.getDuration()) );
 });
@@ -50,7 +50,7 @@
   }, 1000);
 
   function setSong(song) {
-    player.playPause(song);
+helper.playPauseAndUpdate(song);
     $('#time-control .total-time').text( player.prettyTime(song.duration));
   };
 }
