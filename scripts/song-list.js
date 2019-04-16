@@ -10,7 +10,7 @@
           </button>
         </td>
         <td>${song.title}</td>
-        <td>${song.duration}</td>
+       <td>${player.prettyTime(song.duration)}</td>
        </tr>
     `);
 
@@ -20,5 +20,7 @@
     });
 
     $('#song-list').append(song.element);
+    $('#time-control .total-time').text( player.prettyTime(song.duration));
   });
+
 }
