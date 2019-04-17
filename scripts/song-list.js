@@ -17,10 +17,11 @@
     song.element.on('click', event => {
       helper.playPauseAndUpdate(song);
       $('button#play-pause').attr('playState', player.playState);
+        $('#time-control .total-time').text( player.prettyTime(song.duration));
     });
 
     $('#song-list').append(song.element);
-    $('#time-control .total-time').text( player.prettyTime(song.duration));
+
   });
 
 }
